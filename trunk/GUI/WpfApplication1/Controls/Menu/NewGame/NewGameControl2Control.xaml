@@ -7,7 +7,7 @@
              d:DesignHeight="300" d:DesignWidth="300" Width="424" Height="245">
     <Grid>
         <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,12,271,0" Name="comboBox1" VerticalAlignment="Top" Width="55">
-            <ComboBoxItem Content="0" />
+            <ComboBoxItem Content="0" IsSelected="True" />
             <ComboBoxItem Content="1" />
             <ComboBoxItem Content="2" />
             <ComboBoxItem Content="3" />
