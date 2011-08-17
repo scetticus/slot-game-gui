@@ -1,0 +1,13 @@
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\Controls\Menu\NewGame\NewGamePage1.baml
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\Controls\Menu\NewGame\NewGameWindow.baml
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\MainWindow.baml
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\Controls\Menu\NewGame\NewGamePage1.g.cs
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\Controls\Menu\NewGame\NewGameWindow.g.cs
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\MainWindow.g.cs
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\App.g.cs
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\WpfApplication1_MarkupCompile.cache
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\WpfApplication1.g.resources
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\WpfApplication1.Properties.Resources.resources
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Games\SlotGameEditor\trunk\GUI\WpfApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
