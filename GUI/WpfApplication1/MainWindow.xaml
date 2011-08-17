@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Slot Game GUI" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="598" Width="1116" ResizeMode="CanResize" Icon="/WpfApplication1;component/Images/icon.jpg" WindowStartupLocation="CenterOwner" WindowState="Maximized" WindowStyle="ThreeDBorderWindow" Background="#FF52086C" Name="SlotGameGUI">
     <Grid>
-        <StatusBar Height="23" Margin="0,0,-1,0" Name="StatusBar" VerticalAlignment="Bottom" />
+        <StatusBar Height="23" Margin="0,0,-1,0" Name="StatusBar" VerticalAlignment="Bottom" Background="#FF9D9D9D" />
         <Menu Height="23" Name="MainMenu" VerticalAlignment="Top" Background="#FF9D9D9D">
             <MenuItem Header="File" Name="FileMenuItem">
                 <MenuItem Header="Open Game" Name="OpenGameMenuItem" />
@@ -18,7 +18,7 @@
             <MenuItem Header="Tools"></MenuItem>
             <MenuItem Header="Help" />
         </Menu>
-        <ToolBar Height="26" HorizontalAlignment="Left" Margin="0,29,0,0" Name="toolBar1" VerticalAlignment="Top" Width="Auto" />
+        <ToolBar Height="26" Margin="0,29,7,0" Name="toolBar1" VerticalAlignment="Top" />
         <GridSplitter Margin="0,61,0,30" Name="gridSplitter1" />
         <Grid Margin="0,61,0,30" Name="grid1">
             <Grid.ColumnDefinitions>
@@ -26,7 +26,11 @@
                 <ColumnDefinition Width="85*" />
             </Grid.ColumnDefinitions>
             <TabControl Margin="6,6,6,0" Name="ToolsBoxTabControl" Background="#FFBE4718">
-                <TabItem Header="Tools Box" Name="ToolsBoxTabItem"/>
+                <TabItem Header="Tools Box" Name="ToolsBoxTabItem">
+                    <DockPanel>
+                        <TreeView/>
+                    </DockPanel>
+                </TabItem>
             </TabControl>
             <GridSplitter ResizeDirection="Columns" ShowsPreview="False" Width="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" />
             <Grid Grid.Column="1" Margin="0,6,0,0" Name="grid2">
@@ -37,7 +41,9 @@
                 <GridSplitter Width="Auto" ResizeDirection="Rows" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="5" />
                 <TabControl Grid.Row="1" Margin="6,0,0,0" Name="tabControl2" Background="#FFBE4718">
                     <TabItem Header="Output" Name="tabItem2">
-                        <Grid />
+                        <DockPanel>
+                            <DataGrid AutoGenerateColumns="False"/>
+                        </DockPanel>
                     </TabItem>
                 </TabControl>
                 <Grid Margin="11,6,0,6" Name="grid3">
@@ -48,7 +54,18 @@
                     <GridSplitter ResizeDirection="Columns" Width="5" />
                     <TabControl Grid.Column="1" Margin="6,6,7,6" Name="tabControl3" Background="#FFBE4718">
                         <TabItem Header="Properties" Name="tabItem3">
-                            <Grid />
+                            <DockPanel>
+                                <TreeView>
+                                    <TreeViewItem Header="Common">
+                                        <DataGrid IsEnabled="False" HeadersVisibility="None">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Header="Header" IsReadOnly="True" />
+                                                <DataGridTextColumn Binding="{Binding}" Header="Header" />
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </TreeViewItem>
+                                </TreeView>
+                            </DockPanel>
                         </TabItem>
                     </TabControl>
                     <TabControl Margin="6,6,11,6" Name="tabControl1"></TabControl>
