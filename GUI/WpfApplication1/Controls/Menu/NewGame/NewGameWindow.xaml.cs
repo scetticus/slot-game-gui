@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfApplication1.Controls.Menu.NewGame
+namespace SlotGameGUI.Controls.Menu.NewGame
 {
     /// <summary>
     /// Interaction logic for NewGameWindow.xaml
