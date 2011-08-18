@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
+﻿using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace WpfApplication1.Controls.Menu.NewGame
 {
@@ -22,6 +13,40 @@ namespace WpfApplication1.Controls.Menu.NewGame
         public NewGameControl1()
         {
             InitializeComponent();
+        }
+
+        private void LocationTextBoxTextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            var textBox = (TextBox)e.Source;
+
+            if (string.IsNullOrEmpty(Path.GetDirectoryName(textBox.Text)) && string.IsNullOrEmpty(Path.GetPathRoot(textBox.Text)))
+            {
+
+                return;
+            }
+            ResourcesTextBox.Text = textBox.Text + @"\Resources";
+            OutputTextBox.Text = textBox.Text + @"\bin";
+        }
+
+        private void GameNameTextBoxTextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textBox = (TextBox)e.Source;
+            foreach (var textChange in e.Changes)
+            {
+                string str = textBox.Text.Substring(textChange.Offset, textChange.AddedLength);
+                if (!Regex.IsMatch(str, "*[0-9 a-z A-Z]"))
+                {
+                    e.Handled = true;
+                    textBox.Text = 
+                    return;
+                }
+            }
+
+
+            var lastSeparatorIndex = LocationTextBox.Text.LastIndexOf(@"\");
+            var temp = LocationTextBox.Text.Substring(0, lastSeparatorIndex + 1);
+            LocationTextBox.Text = temp + textBox.Text;
         }
     }
 }
