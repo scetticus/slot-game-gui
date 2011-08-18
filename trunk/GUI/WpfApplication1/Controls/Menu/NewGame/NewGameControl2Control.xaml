@@ -6,12 +6,40 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Width="424" Height="245">
     <Grid>
-        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,12,271,0" Name="comboBox1" VerticalAlignment="Top" Width="55">
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="98,12,0,0" Name="SystemIndexComboBox" VerticalAlignment="Top" Width="55">
             <ComboBoxItem Content="0" IsSelected="True" />
             <ComboBoxItem Content="1" />
             <ComboBoxItem Content="2" />
             <ComboBoxItem Content="3" />
         </ComboBox>
         <Label Content="System Index:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Resolution:" Height="28" HorizontalAlignment="Left" Margin="170,12,0,0" Name="label2" VerticalAlignment="Top" Width="67" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="243,12,0,0" Name="ResolutionComboBox" VerticalAlignment="Top" Width="82">
+            <ComboBoxItem Content="1280x768" IsSelected="True" />
+            <ComboBoxItem Content="1280x720" />
+            <ComboBoxItem Content="768x1366" />
+        </ComboBox>
+        <CheckBox Content="Full Screen" Height="16" HorizontalAlignment="Left" Margin="289,41,0,0" Name="FullScreenCheckBox" VerticalAlignment="Top" />
+        <CheckBox Content="VSync" Height="16" HorizontalAlignment="Left" Margin="289,86,0,0" Name="VSyncCheckBox" VerticalAlignment="Top" />
+        <CheckBox Content="CPU Sensitive" Height="16" Margin="289,63,0,0" Name="CPUSensitiveCheckBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="81" />
+        <GroupBox Header="CPU Affinity " Height="108" HorizontalAlignment="Left" Margin="12,108,0,0" Name="groupBox1" VerticalAlignment="Top" Width="400">
+            <Grid Name="CPUAffinityGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*" />
+                    <ColumnDefinition Width="25*" />
+                    <ColumnDefinition Width="25*" />
+                    <ColumnDefinition Width="25*" />
+                </Grid.ColumnDefinitions>
+                <CheckBox Content="CPU1" Grid.Column="0" Height="16" HorizontalAlignment="Left" Margin="6,14,0,0" Name="CPU1CheckBox" VerticalAlignment="Top" />
+                <CheckBox Content="CPU2" Grid.Column="1" Height="16" HorizontalAlignment="Left" Margin="6,14,0,0" Name="CPU2CheckBox" VerticalAlignment="Top" />
+                <CheckBox Content="CPU3" Grid.Column="2" Height="16" HorizontalAlignment="Left" Margin="6,14,0,0" Name="CPU3CheckBox" VerticalAlignment="Top" />
+                <CheckBox Content="CPU4" Grid.Column="3" Height="16" HorizontalAlignment="Left" Margin="6,14,0,0" Name="CPU4CheckBox" VerticalAlignment="Top" />
+                <Label Content="Carefully chosen. Please choose according to the actual EGM." Height="28" Margin="6,34,6,0" Name="label3" VerticalAlignment="Top" Grid.ColumnSpan="4" Foreground="Red" />
+                <Label Content=" If all do not choose, that is automatically assigned." Height="28" HorizontalAlignment="Left" Margin="6,55,0,0" Name="label4" VerticalAlignment="Top" Grid.ColumnSpan="4" Width="376" Foreground="Red" />
+            </Grid>
+        </GroupBox>
+        <Label Content="Targeted Frames Per Second:" Height="28" HorizontalAlignment="Left" Margin="12,41,0,0" Name="label5" VerticalAlignment="Top" />
+        <Label Content="60" Height="28" HorizontalAlignment="Left" Margin="170,41,0,0" Name="TargetedFramesPerSecondResultLabel" VerticalAlignment="Top" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="18,62,0,0" Name="TargetedFramesPerSecondSlider" VerticalAlignment="Top" Width="219" Value="60" Maximum="120" Minimum="0" ValueChanged="TargetedFramesPerSecondSliderValueChanged" SmallChange="1" TickPlacement="TopLeft" TickFrequency="10" IsSnapToTickEnabled="True" />
     </Grid>
 </UserControl>

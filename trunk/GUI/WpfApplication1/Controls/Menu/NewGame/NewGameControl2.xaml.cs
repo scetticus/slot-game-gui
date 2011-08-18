@@ -23,8 +23,15 @@ namespace WpfApplication1.Controls.Menu.NewGame
         {
             InitializeComponent();
 
-            Screen1Control.Content = new NewGameControl2Control();
-            Screen2Control.Content = new NewGameControl2Control();
+            var content = new NewGameControl2Control();
+            content.SystemIndexComboBox.SelectedIndex = 0;
+            content.ResolutionComboBox.SelectedIndex = 0;
+            Screen1Control.Content = content;
+
+            content = new NewGameControl2Control();
+            content.SystemIndexComboBox.SelectedIndex = 1;
+            content.ResolutionComboBox.SelectedIndex = 2;
+            Screen2Control.Content = content;
         }
 
         private void AddScreenButtonClick(object sender, RoutedEventArgs e)

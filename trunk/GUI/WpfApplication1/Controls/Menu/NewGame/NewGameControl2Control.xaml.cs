@@ -23,5 +23,12 @@ namespace WpfApplication1.Controls.Menu.NewGame
         {
             InitializeComponent();
         }
+
+        private void TargetedFramesPerSecondSliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            TargetedFramesPerSecondResultLabel.Content = e.NewValue;
+        }
+
+
     }
 }

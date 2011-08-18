@@ -7,11 +7,17 @@
              d:DesignHeight="300" d:DesignWidth="300" Width="581" Height="331">
 
     <Grid Name="Panel">
-        <GroupBox Header="Location" Margin="12,12,12,204" Name="groupBox1">
-            <Grid>
-                <Label Content="Location:" Height="28" HorizontalAlignment="Left" Margin="45,16,0,0" Name="label1" VerticalAlignment="Top" Width="56" />
-                <TextBox Height="23" HorizontalAlignment="Left" Margin="107,18,0,0" Name="textBox1" VerticalAlignment="Top" Width="347" Text="C:" />
-                <Button Content="Browse" Height="23" HorizontalAlignment="Left" Margin="464,16,0,0" Name="BrowseButton" VerticalAlignment="Top" Width="75" />
+        <GroupBox Header="Location" Margin="12,12,12,119" Name="groupBox1">
+            <Grid>     
+                <Label Content="Location:" Height="28" HorizontalAlignment="Left" Margin="23,63,0,0" Name="label1" VerticalAlignment="Top" Width="56" />
+                <Button Content="Browse" Height="23" HorizontalAlignment="Left" Margin="464,63,0,0" Name="BrowseButton" VerticalAlignment="Top" Width="75" />
+                <Label Content="Resources:" Height="28" HorizontalAlignment="Left" Margin="23,97,0,0" Name="label2" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="107,99,0,0" Name="ResourcesTextBox" VerticalAlignment="Top" Width="347" IsEnabled="False" IsReadOnly="True" Text="C:\Resources" />
+                <Label Content="Output:" Height="28" HorizontalAlignment="Left" Margin="23,131,0,0" Name="label3" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="107,133,0,0" Name="OutputTextBox" VerticalAlignment="Top" Width="347" IsReadOnly="True" IsEnabled="False" Text="C:\bin" />
+                <Label Content="Game Name:" Height="28" HorizontalAlignment="Left" Margin="23,6,0,0" Name="label4" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="107,65,0,0" Name="LocationTextBox" VerticalAlignment="Top" Width="347" Text="C:\" TextChanged="LocationTextBoxTextChanged" IsEnabled="False" IsReadOnly="True" />
+                <TextBox Height="25" HorizontalAlignment="Left" Margin="107,6,0,0" Name="GameNameTextBox" VerticalAlignment="Top" Width="347" Text="NewGame1" TextChanged="GameNameTextBoxTextChanged" />
             </Grid>
         </GroupBox>
     </Grid>
