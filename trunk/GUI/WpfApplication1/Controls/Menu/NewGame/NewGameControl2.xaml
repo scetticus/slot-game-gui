@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WpfApplication1.Controls.Menu.NewGame.NewGameControl2"
+﻿<UserControl x:Class="SlotGameGUI.Controls.Menu.NewGame.NewGameControl2"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,7 +8,7 @@
     <Grid>
         <GroupBox Header="Displays" Margin="12,12,110,12" Name="groupBox1">
             <Grid>
-                <TabControl Height="276" HorizontalAlignment="Left" Margin="6,6,0,0" Name="tabControl1" VerticalAlignment="Top" Width="435">
+                <TabControl Margin="6,6,6,2" Name="tabControl1">
                     <TabItem Header="Screen1" Name="Screen1TabItem">
                         <ContentControl  Name="Screen1Control" />
                     </TabItem>
@@ -19,6 +19,6 @@
             </Grid>
         </GroupBox>
         <Button Content="Add Screen" Margin="477,25,29,283" Name="AddScreenButton" Click="AddScreenButtonClick" />
-        <Button Content="Remove" Height="23" HorizontalAlignment="Left" Margin="477,71,0,0" Name="RemoveButton" VerticalAlignment="Top" Width="75" />
+        <Button Content="Remove" Margin="477,71,29,237" Name="RemoveButton" />
     </Grid>
 </UserControl>

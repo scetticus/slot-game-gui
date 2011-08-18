@@ -1,14 +1,12 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using TextBox = System.Windows.Controls.TextBox;
 using UserControl = System.Windows.Controls.UserControl;
 
-
-namespace WpfApplication1.Controls.Menu.NewGame
+namespace SlotGameGUI.Controls.Menu.NewGame
 {
     /// <summary>
     /// Interaction logic for NewGameControl1.xaml
