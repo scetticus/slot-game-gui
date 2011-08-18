@@ -1,0 +1,1013 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<GameConfiguration>
+  <MousePointerEnabled>true</MousePointerEnabled>
+
+  <ShowDisplayDiagnostics>true</ShowDisplayDiagnostics>
+
+  <ConnectorConfiguration host="127.0.0.1" port="1111" updateFrequency="100" haltOnFailure="false" />
+
+  <DisplayConfiguration>
+    <Display systemIndex="1">
+      <!-- main screen -->
+      <Resolution x="1280" y="720" />
+      <EnableFullScreen>false</EnableFullScreen>
+      <EnableVSync>false</EnableVSync>
+      <!-- Change this with caution! It affects the game loop frequency -->
+      <TargetedFramesPerSecond>60</TargetedFramesPerSecond>
+      <!-- Change this with caution! It affects the game loop - setting to true will reduce CPU % at the cost of causing inexact game loop timing -->
+      <CPUSensitive>false</CPUSensitive>
+      <!-- Change this with caution! This is used for fine tuning the game to process on which cores
+          - it is a bitmask such that 00000001 means run on core 0 and 00000011 means split between 
+          core 0 and 1 and 00000010 means run only on core 1. Setting this to a negative value -1 turns off CPU Affinity and allows Windows to schedule as it sees fit
+          This can be tuned to ensure that there is always enough CPU on any given core of a processor to handle SAS -->
+      <CPUAffinity>-1</CPUAffinity>
+      <!--2 = 00000010 -->
+    </Display>
+    <Display systemIndex="2">
+      <!-- top screen -->
+      <Resolution x="1280" y="720" />
+      <!-- use this for normal 22" Ruby top screen -->
+      <!--<Resolution x="768" y="1366" />-->
+      <!--use this for super Ruby 37" top screen-->
+      <EnableFullScreen>false</EnableFullScreen>
+      <EnableVSync>false</EnableVSync>
+      <!-- Change this with caution! It affects the game loop frequency -->
+      <TargetedFramesPerSecond>15</TargetedFramesPerSecond>
+      <!-- Change this with caution! It affects the game loop - setting to true will reduce CPU % at the cost of causing inexact game loop timing -->
+      <CPUSensitive>true</CPUSensitive>
+      <!-- Change this with caution! This is used for fine tuning the game to process on which cores
+          - it is a bitmask such that 00000001 means run on core 0 and 00000011 means split between 
+          core 0 and 1 and 00000010 means run only on core 1. Setting this to a negative value -1 turns off CPU Affinity and allows Windows to schedule as it sees fit
+          This can be tuned to ensure that there is always enough CPU on any given core of a processor to handle SAS -->
+      <CPUAffinity>-1</CPUAffinity>
+      <!--2 = 00000010 -->
+    </Display>
+  </DisplayConfiguration>
+
+  <LanguageConfiguration>
+    <LanguageRevertIdleTimeSeconds>300</LanguageRevertIdleTimeSeconds>
+    <DefaultLanguage>zh-CHT</DefaultLanguage>
+    <SupportedLanguage>en-US</SupportedLanguage>
+    <SupportedLanguage>zh-CHT</SupportedLanguage>
+  </LanguageConfiguration>
+
+  <CurrencyConfiguration handler="AspectGaming.Common.Currency.DollarCurrencyHandler"/>
+
+  <WinshowConfiguration frameRate="30" flashAllLinesMillis="500" symbolWidth="195" symbolHeight="144" defaultPointX="139" defaultPointY="50" maxLoopCount="9999999" verticalSpacingPixels="0" leftMarginPixels="3" horizontalSpacePixels="0" isScale="true">
+    <Symbol index="0" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="1" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="2" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="3" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="4" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="5" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="6" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="7" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="8" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="9" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="10" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="11" offsetX="0" offsetY="0" maxLoopCount="1" animateType="Alpha" />
+    <Symbol index="12" offsetX="102.5" offsetY="128" maxLoopCount="1" animateType="Sequence" />
+  </WinshowConfiguration>
+
+  <ReelConfiguration numReels="5" startPointX="139" startPointY="50" reelWidthPixels="195" reelHeightPixels="576">
+    <NumberSymbols>13</NumberSymbols>
+    <SingleReelConfiguration reelIndex="0">
+      <NumRows>4</NumRows>
+      <ReelBounceStepPixels>
+        3,6,9,12,15,-15,-12,-9,-6,-3
+      </ReelBounceStepPixels>
+      <VerticalSpacingPixels>0</VerticalSpacingPixels>
+      <LeftMarginPixels>0</LeftMarginPixels>
+      <StartPointX>139</StartPointX>
+      <StartPointY>50</StartPointY>
+      <SymbolSpinCount>20</SymbolSpinCount>
+      <SymbolSpinVelocityPixels>40</SymbolSpinVelocityPixels>
+      <BaseReelStrip>
+        6, 7, 11, 3, 9, 8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 4, 11, 9, 10, 5, 8, 6, 1, 8, 6, 7, 11, 9, 10, 7, 8, 6, 7, 11, 2, 10, 5, 9, 10, 5, 8, 10, 7, 11, 4, 11, 9, 10, 7, 11, 9, 10, 8, 12
+      </BaseReelStrip>
+      <BonusReelStrip>
+        6, 7, 11, 3, 9, 8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 4, 11, 9, 10, 5, 8, 6, 1, 8, 6, 7, 11, 9, 10, 7, 8, 6, 7, 11, 2, 10, 5, 9, 10, 5, 8, 10, 7, 11, 4, 11, 9, 10, 7, 11, 9, 10, 8, 12
+      </BonusReelStrip>
+      <StopSound triggeringSymbols="0,1,2,3,4,5,6,7,8,9,10,11,12" soundName="reelspin_0" playType="Stopping" unique="false" playOnReelStop="false" handlerClass="AspectGaming.UI.Reel.ReelSpinStopHandler" />
+      <StopSound triggeringSymbols="12" soundName="symsting_0" playType="Stopping" unique="false" playOnReelStop="true" handlerClass="AspectGaming.UI.Reel.ScatterStopHandler" />
+    </SingleReelConfiguration>
+    <SingleReelConfiguration reelIndex="1">
+      <NumRows>4</NumRows>
+      <ReelBounceStepPixels>
+        3,6,9,12,15,-15,-12,-9,-6,-3
+      </ReelBounceStepPixels>
+      <VerticalSpacingPixels>0</VerticalSpacingPixels>
+      <LeftMarginPixels>0</LeftMarginPixels>
+      <StartPointX>341</StartPointX>
+      <StartPointY>50</StartPointY>
+      <SymbolSpinCount>26</SymbolSpinCount>
+      <SymbolSpinVelocityPixels>40</SymbolSpinVelocityPixels>
+      <BaseReelStrip>
+        10, 9, 8, 7, 11, 1, 7, 10, 9, 8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 10, 6, 11, 5, 8, 0, 10, 4, 8, 11, 9, 6, 11, 5, 9, 8, 2, 9, 12, 11, 7, 4, 10, 9, 8, 3, 11, 10, 5, 6, 10, 9, 11, 7, 8
+      </BaseReelStrip>
+      <BonusReelStrip>
+        10, 9, 8, 7, 11, 1, 7, 10, 9, 8, -1, -1, -1, -1, -1, -1, -1, -1, -1, 10, 6, 11, 5, 8, 0, 10, 4, 8, 11, 9, 6, 11, 5, 9, 8, 2, 9, 12, 11, 7, 4, 10, 9, 8, 3, 11, 10, 5, 6, 10, 9, 11, 7, 8
+      </BonusReelStrip>
+      <StopSound triggeringSymbols="0,1,2,3,4,5,6,7,8,9,10,11,12" soundName="reelspin_1" playType="Stopping" unique="false" playOnReelStop="false" handlerClass="AspectGaming.UI.Reel.ReelSpinStopHandler" />
+      <StopSound triggeringSymbols="12" soundName="symsting_1" playType="Stopping" unique="false" playOnReelStop="true" handlerClass="AspectGaming.UI.Reel.ScatterStopHandler" />
+    </SingleReelConfiguration>
+    <SingleReelConfiguration reelIndex="2">
+      <NumRows>4</NumRows>
+      <ReelBounceStepPixels>
+        3,6,9,12,15,-15,-12,-9,-6,-3
+      </ReelBounceStepPixels>
+      <VerticalSpacingPixels>0</VerticalSpacingPixels>
+      <LeftMarginPixels>0</LeftMarginPixels>
+      <StartPointX>543</StartPointX>
+      <StartPointY>50</StartPointY>
+      <SymbolSpinCount>32</SymbolSpinCount>
+      <SymbolSpinVelocityPixels>40</SymbolSpinVelocityPixels>
+      <BaseReelStrip>
+        8, 7, 10, 3, 11, 6, 5, 9, 11, 1, 10, 8, 7, 10, -1, -1, -1, -1, -1, -1, -1, -1, -1, 5, 11, 4, 9, 0, 7, 3, 10, 11, 6, 12, 9, 11, 10, 11, 8, 12, 10, 8, 7, 8, 2, 9, 11, 4, 9, 7, 9, 10, 8, 6
+      </BaseReelStrip>
+      <BonusReelStrip>
+        8, 7, 10, 3, 11, 6, 5, 9, 11, 1, 10, 8, 7, 10, -1, -1, -1, -1, -1, -1, -1, -1, -1, 5, 11, 4, 9, 0, 7, 3, 10, 11, 6, 12, 9, 11, 10, 11, 8, 12, 10, 8, 7, 8, 2, 9, 11, 4, 9, 7, 9, 10, 8, 6
+      </BonusReelStrip>
+      <StopSound triggeringSymbols="0,1,2,3,4,5,6,7,8,9,10,11,12" soundName="reelspin_2" playType="Stopping" unique="false" playOnReelStop="false" handlerClass="AspectGaming.UI.Reel.ReelSpinStopHandler" />
+      <StopSound triggeringSymbols="12" soundName="symsting_2" playType="Stopping" unique="false" playOnReelStop="true" handlerClass="AspectGaming.UI.Reel.ScatterStopHandler" />
+    </SingleReelConfiguration>
+    <SingleReelConfiguration reelIndex="3">
+      <NumRows>4</NumRows>
+      <ReelBounceStepPixels>
+        3,6,9,12,15,-15,-12,-9,-6,-3
+      </ReelBounceStepPixels>
+      <VerticalSpacingPixels>0</VerticalSpacingPixels>
+      <LeftMarginPixels>0</LeftMarginPixels>
+      <StartPointX>745</StartPointX>
+      <StartPointY>50</StartPointY>
+      <SymbolSpinCount>38</SymbolSpinCount>
+      <SymbolSpinVelocityPixels>40</SymbolSpinVelocityPixels>
+      <BaseReelStrip>
+        1, 8, 9, 10, 3, 8, 11, 5, 9, 10, 4, 8, 11, 2, 7, 6, 5, 9, -1, -1, -1, -1, -1, -1, -1, -1, -1, 11, 2, 7, 0, 8, 3, 9, 10, 6, 7, 3, 8, 11, 1, 8, 12, 9, 4, 2, 7, 4, 6, 5, 9, 11, 10, 11
+      </BaseReelStrip>
+      <BonusReelStrip>
+        1, 8, 9, 10, 3, 8, 11, 5, 9, 10, 4, 8, 11, 2, 7, 6, 5, 9, -1, -1, -1, -1, -1, -1, -1, -1, -1, 11, 2, 7, 0, 8, 3, 9, 10, 6, 7, 3, 8, 11, 1, 8, 12, 9, 4, 2, 7, 4, 6, 5, 9, 11, 10, 11
+      </BonusReelStrip>
+      <StopSound triggeringSymbols="0,1,2,3,4,5,6,7,8,9,10,11,12" soundName="reelspin_3" playType="Stopping" unique="false" playOnReelStop="false" handlerClass="AspectGaming.UI.Reel.ReelSpinStopHandler" />
+      <StopSound triggeringSymbols="12" soundName="symsting_3" playType="Stopping" unique="false" playOnReelStop="true" handlerClass="AspectGaming.UI.Reel.ScatterStopHandler" />
+    </SingleReelConfiguration>
+    <SingleReelConfiguration reelIndex="4">
+      <NumRows>4</NumRows>
+      <ReelBounceStepPixels>
+        3,6,9,12,15,-15,-12,-9,-6,-3
+      </ReelBounceStepPixels>
+      <VerticalSpacingPixels>0</VerticalSpacingPixels>
+      <LeftMarginPixels>0</LeftMarginPixels>
+      <StartPointX>947</StartPointX>
+      <StartPointY>50</StartPointY>
+      <SymbolSpinCount>44</SymbolSpinCount>
+      <SymbolSpinVelocityPixels>40</SymbolSpinVelocityPixels>
+      <BaseReelStrip>
+        8, 9, 1, 7, 3, 2, 11, 7, 9, 7, 3, 10, 8, 3, 6, 10, 5, 8, 4, 9, 2, 11, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 6, 0, 9, 2, 11, 7, 12, 8, 4, 6, 10, 4, 9, 7, 12, 10, 8, 5, 11, 6, 9, 5
+      </BaseReelStrip>
+      <BonusReelStrip>
+        8, 9, 1, 7, 3, 2, 11, 7, 9, 7, 3, 10, 8, 3, 6, 10, 5, 8, 4, 9, 2, 11, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 6, 0, 9, 2, 11, 7, 12, 8, 4, 6, 10, 4, 9, 7, 12, 10, 8, 5, 11, 6, 9, 5
+      </BonusReelStrip>
+      <StopSound triggeringSymbols="0,1,2,3,4,5,6,7,8,9,10,11,12" soundName="reelspin_4" playType="Stopping" unique="false" playOnReelStop="false" handlerClass="AspectGaming.UI.Reel.ReelSpinStopHandler" />
+      <StopSound triggeringSymbols="12" soundName="symsting_4" playType="Stopping" unique="false" playOnReelStop="true" handlerClass="AspectGaming.UI.Reel.ScatterStopHandler" />
+    </SingleReelConfiguration>
+  </ReelConfiguration>
+
+  <ButtonConfiguration>
+    <HelpButtonConfiguration startPointX="125" startPointY="662" />
+    <LanuageButtonConfiguration startPointX="247" startPointY="662" />
+    <AutoPlayButtonConfiguration startPointX="1156" startPointY="638" />
+    <VolumeButtonConfiguration startPointX="11" startPointY="646" />
+    <NextHelpPageButtonConfiguration startPointX="1063" startPointY="505" />
+    <PreviousHelpPageButtonConfiguration startPointX="135" startPointY="505" />
+  </ButtonConfiguration>
+
+  <DenomConfiguration positionX="989" positionY="658" />
+
+  <MeterConfiguration>
+    <Meter name="TotalBetMeter" originVectorY="8" originVectorX="999" font="MeterFont" alignment="Left" colorBaseGame="#380033" colorFreeGame="#ffffff" />
+    <Meter name="CreditMeter" originVectorY="8" originVectorX="373" font="MeterFont" alignment="Right" colorBaseGame="#380033" colorFreeGame="#ffffff" />
+    <Meter name="AwardedMeter" originVectorY="632" originVectorX="392" font="MeterFont" alignment="Right" color="#ffffff" />
+    <Meter name="TotalBonusMeter" originVectorY="672" originVectorX="1197" font="MeterFont" alignment="Right" color="#ffffff" />
+    <Meter name="RemainingMeter" originVectorY="679" originVectorX="392" font="MeterFont" alignment="Right" color="#ffffff" />
+    <Meter name="CashMeter" originVectorY="8" originVectorX="373" font="MeterFont" alignment="Right" colorBaseGame="#380033" colorFreeGame="#ffffff" />
+    <Meter name="WinMeter" originVectorY="667" originVectorX="863" font="WinMeterFont" alignment="Right" colorBaseGame="#380033" colorFreeGame="#ffffff">
+      <RollingMeterSound lowMultiple="0" highMultiple="0.15" baseGameSoundName="basewin0.5sA" freeGameSoundName="freewin0.5s" />
+      <RollingMeterSound lowMultiple="0.15" highMultiple="0.30" baseGameSoundName="basewin0.5sB" freeGameSoundName="freewin0.5s" />
+      <RollingMeterSound lowMultiple="0.30" highMultiple="0.40" baseGameSoundName="basewin0.8sA" freeGameSoundName="freewin0.8s" />
+      <RollingMeterSound lowMultiple="0.40" highMultiple="0.50" baseGameSoundName="basewin0.8sB" freeGameSoundName="freewin0.8s" />
+      <RollingMeterSound lowMultiple="0.50" highMultiple="0.75" baseGameSoundName="basewin1sA" freeGameSoundName="freewin1s" />
+      <RollingMeterSound lowMultiple="0.75" highMultiple="0.80" baseGameSoundName="basewin1sB" freeGameSoundName="freewin1s" />
+      <RollingMeterSound lowMultiple="0.80" highMultiple="0.95" baseGameSoundName="basewin2sA" freeGameSoundName="freewin2s" />
+      <RollingMeterSound lowMultiple="0.95" highMultiple="1.05" baseGameSoundName="basewin2sB" freeGameSoundName="freewin2s" />
+      <RollingMeterSound lowMultiple="1.05" highMultiple="1.30" baseGameSoundName="basewin3s" freeGameSoundName="freewin3s" />
+      <RollingMeterSound lowMultiple="1.30" highMultiple="1.60" baseGameSoundName="basewin5s" freeGameSoundName="freewin5s" />
+      <RollingMeterSound lowMultiple="1.60" highMultiple="1.70" baseGameSoundName="basewin6s" freeGameSoundName="freewin6s" />
+      <RollingMeterSound lowMultiple="1.70" highMultiple="3.00" baseGameSoundName="basewin8s" freeGameSoundName="freewin8s" />
+      <RollingMeterSound lowMultiple="3.00" highMultiple="4.50" baseGameSoundName="basewin9s" freeGameSoundName="freewin10s" />
+      <RollingMeterSound lowMultiple="4.50" highMultiple="7.00" baseGameSoundName="basewin15s" freeGameSoundName="freewin15s" />
+      <RollingMeterSound lowMultiple="7.00" highMultiple="8.50" baseGameSoundName="basewin21s" freeGameSoundName="freewin20s" />
+      <RollingMeterSound lowMultiple="8.50" highMultiple="9.50" baseGameSoundName="basewin23s" freeGameSoundName="freewin25s" />
+      <RollingMeterSound lowMultiple="9.50" highMultiple="12.50" baseGameSoundName="basewin29s" freeGameSoundName="freewin30s" />
+      <RollingMeterSound lowMultiple="12.50" highMultiple="16.50" baseGameSoundName="basewin41s" freeGameSoundName="freewin40s" />
+      <RollingMeterSound lowMultiple="16.50" highMultiple="21.50" baseGameSoundName="basewin56s" freeGameSoundName="freewin50s" />
+      <RollingMeterSound lowMultiple="21.50" highMultiple="25.00" baseGameSoundName="basewin61s" freeGameSoundName="freewin60s" />
+      <RollingMeterSound lowMultiple="25.00" highMultiple="35.00" baseGameSoundName="basewin83s" freeGameSoundName="freewin90s" />
+      <RollingMeterSound lowMultiple="35.00" highMultiple="99999999" baseGameSoundName="basewin121s" freeGameSoundName="freewin120s" />
+    </Meter>
+  </MeterConfiguration>
+
+  <MessageConfiguration positionLeftX="427" positionRightX="856" displayType="Center">
+    <!-- other displayType is Scrolling -->
+    <Message id="GET_3_MORE">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        3 OR MORE@{image}WINS FREE GAMES
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">
+        三個或更多@{image},贏取免費遊戲
+      </Text>
+    </Message>
+    <Message id="FREEGAME_12WIN">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        @{image}WINS 12 FREE GAMES
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">@{image}贏得12個免費遊戲</Text>
+    </Message>
+    <Message id="FREEGAME_15WIN">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        @{image}WINS 15 FREE GAMES
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">@{image}贏得15個免費遊戲</Text>
+    </Message>
+    <Message id="WINNER">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        WINNER PAYS @{credit}
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">總共贏@{credit}的信用分</Text>
+    </Message>
+    <Message id="GAMBLE_WIN">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        GAMBLE WINS @{credit} CREDITS
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">博取贏得@{credit}信用分</Text>
+    </Message>
+    <Message id="TAKEWIN_OR_GAMBLE">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">TAKE WIN OR GAMBLE</Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">博取或者取分</Text>
+    </Message>
+    <Message id="CONTINUE_GAMBLE_OR_TAKE_WIN">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        PRESS GAMBLE OR TAKE WIN
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">按博取鍵繼續或取分</Text>
+    </Message>
+    <Message id="SYMBOL_WIN">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        @{image}WINS @{credit} CREDITS
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">@{image}贏@{credit}分</Text>
+    </Message>
+    <Message id="RISK">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        RISK HALF OR RISK ALL
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">押註一半或者全部押注</Text>
+    </Message>
+    <Message id="GUESS">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        GUESS COLOR OR SUIT TO WIN
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">選擇顏色或者花色</Text>
+    </Message>
+    <Message id="GOOD_LUCK">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">GOOD LUCK</Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">祝你好運</Text>
+    </Message>
+    <Message id="LOADING">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">LOADING</Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">正在讀取……</Text>
+    </Message>
+    <Message id="PLAY_AGAIN">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">BET MORE, WIN MORE</Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">投注越高,機會越多</Text>
+    </Message>
+    <Message id="CASH_OUT">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">CASHOUT PENDING</Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">正在出銀</Text>
+    </Message>
+    <Message id="RESIDUAL_CREDITS">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">
+        RESIDUAL CREDITS ${credit}
+      </Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">剩餘@{credit}</Text>
+    </Message>
+    <Message id="CASH_IN">
+      <BaseGameColor>#ffffff</BaseGameColor>
+      <FreeGameColor>#ffffff</FreeGameColor>
+      <Text language="en-US" font="MessageFont" positionY="3" imagePositionY="7">CASH IN</Text>
+      <Text language="zh-CHT" font="CHTMessageFont" positionY="4" imagePositionY="4">鈔票/票據放入</Text>
+    </Message>
+    <MoneyMessage id="RestrictedTicketOut" color="#ffffff">
+      <Text language="en-US" font="BankGothicMdBT" positionY="3" imagePositionY="7">
+        Restricted Ticket Cashout
+      </Text>
+      <Text language="zh-CHT" font="BankGothicMdBT" positionY="4" imagePositionY="4">支出限制性現金卷數</Text>
+    </MoneyMessage>
+    <MoneyMessage id="RestrictedTicketIn"  color="#ffffff">
+      <Text language="en-US" font="BankGothicMdBT" positionY="3" imagePositionY="7">
+        Restricted Ticket In
+      </Text>
+      <Text language="zh-CHT" font="BankGothicMdBT" positionY="4" imagePositionY="4">投入限制性現金卷</Text>
+    </MoneyMessage>
+    <MoneyMessage id="CashableTicketIn"  color="#ffffff">
+      <Text language="en-US" font="BankGothicMdBT" positionY="3" imagePositionY="7">
+        Cashable Ticket In
+      </Text>
+      <Text language="zh-CHT" font="BankGothicMdBT" positionY="4" imagePositionY="4">可兌現票據投入總額</Text>
+    </MoneyMessage>
+    <MoneyMessage id="CashableTicketOut"  color="#ffffff">
+      <Text language="en-US" font="BankGothicMdBT" positionY="3" imagePositionY="7">
+        Cashable Ticket Out
+      </Text>
+      <Text language="zh-CHT" font="BankGothicMdBT" positionY="4" imagePositionY="4">可兌現票據支出總額</Text>
+    </MoneyMessage>
+    <MoneyMessage id="LegacyBonus"  color="#ffffff">
+      <Text language="en-US" font="BankGothicMdBT" positionY="3" imagePositionY="7">
+        Legacy Bonus
+      </Text>
+      <Text language="zh-CHT" font="BankGothicMdBT" positionY="4" imagePositionY="4">紅利獎金</Text>
+    </MoneyMessage>
+    <MoneyMessage id="CashIn"  color="#ffffff">
+      <Text language="en-US" font="BankGothicMdBT" positionY="3" imagePositionY="7">
+        Cash In
+      </Text>
+      <Text language="zh-CHT" font="BankGothicMdBT" positionY="4" imagePositionY="4">投入現金</Text>
+    </MoneyMessage>
+    <MoneyMessage id="ResidualTicketOut"  color="#ffffff">
+      <Text language="en-US" font="BankGothicMdBT" positionY="3" imagePositionY="7">
+        Residual Ticket Out
+      </Text>
+      <Text language="zh-CHT" font="BankGothicMdBT" positionY="4" imagePositionY="4">剩餘支出總額</Text>
+    </MoneyMessage>
+  </MessageConfiguration>
+
+  <LinesConfiguration thickness="3.75" lineStyle="Standard" pipTextColor="#000000" pipTextFont="BetPipFont" isShadow="true">
+    <Line number="1" color="#FF0000" pipPositionX="72" pipPositionY="45">
+      <Point x="120" y="59" />
+      <Point x="1142" y="59" />
+    </Line>
+    <Line number="2" color="#FF2F00" pipPositionX="72" pipPositionY="68">
+      <Point x="120" y="82" />
+      <Point x="438" y="82" />
+      <Point x="640" y="231" />
+      <Point x="842" y="82" />
+      <Point x="1142" y="82" />
+    </Line>
+    <Line number="3" color="#FF6200" pipPositionX="72" pipPositionY="91">
+      <Point x="120" y="105" />
+      <Point x="233" y="105" />
+      <Point x="438" y="226" />
+      <Point x="842" y="226" />
+      <Point x="1044" y="105" />
+      <Point x="1142" y="105" />
+    </Line>
+    <Line number="4" color="#FF9500" pipPositionX="72" pipPositionY="114">
+      <Point x="120" y="127" />
+      <Point x="233" y="127" />
+      <Point x="640" y="373" />
+      <Point x="1044" y="128" />
+      <Point x="1142" y="127" />
+    </Line>
+    <Line number="5" color="#FFAA00" pipPositionX="72" pipPositionY="137">
+      <Point x="120" y="151" />
+      <Point x="233" y="151" />
+      <Point x="438" y="238" />
+      <Point x="640" y="150" />
+      <Point x="842" y="238" />
+      <Point x="1044" y="151" />
+      <Point x="1142" y="151" />
+    </Line>
+    <Line number="6" color="#FFD400" pipPositionX="72" pipPositionY="160">
+      <Point x="120" y="174" />
+      <Point x="640" y="174" />
+      <Point x="842" y="250" />
+      <Point x="1044" y="174" />
+      <Point x="1142" y="174" />
+    </Line>
+    <Line number="7" color="#FF1500" pipPositionX="1166" pipPositionY="45">
+      <Point x="138" y="59" />
+      <Point x="233" y="59" />
+      <Point x="438" y="215" />
+      <Point x="640" y="59" />
+      <Point x="1164" y="59" />
+    </Line>
+    <Line number="8" color="#FF4800" pipPositionX="1166" pipPositionY="68">
+      <Point x="138" y="82" />
+      <Point x="438" y="82" />
+      <Point x="640" y="232" />
+      <Point x="842" y="232" />
+      <Point x="1044" y="82" />
+      <Point x="1164" y="82" />
+    </Line>
+    <Line number="9" color="#FF7B00" pipPositionX="1166" pipPositionY="91">
+      <Point x="138" y="105" />
+      <Point x="233" y="105" />
+      <Point x="438" y="228" />
+      <Point x="640" y="228" />
+      <Point x="842" y="105" />
+      <Point x="1164" y="105" />
+    </Line>
+    <Line number="10" color="#FFAA00" pipPositionX="1166" pipPositionY="114">
+      <Point x="138" y="127" />
+      <Point x="438" y="127" />
+      <Point x="640" y="380" />
+      <Point x="842" y="127" />
+      <Point x="1164" y="127" />
+    </Line>
+    <Line number="11" color="#FFBF00" pipPositionX="1166" pipPositionY="137">
+      <Point x="138" y="151" />
+      <Point x="438" y="151" />
+      <Point x="640" y="374" />
+      <Point x="1044" y="151" />
+      <Point x="1164" y="151" />
+    </Line>
+    <Line number="12" color="#FFEE00" pipPositionX="1166" pipPositionY="160">
+      <Point x="138" y="174" />
+      <Point x="233" y="174" />
+      <Point x="640" y="385" />
+      <Point x="842" y="174" />
+      <Point x="1164" y="174" />
+    </Line>
+    <Line number="13" color="#EAFF00" pipPositionX="72" pipPositionY="183">
+      <Point x="120" y="197" />
+      <Point x="188" y="197" />
+      <Point x="233" y="255" />
+      <Point x="1096" y="255" />
+      <Point x="1142" y="197" />
+    </Line>
+    <Line number="14" color="#BFff00" pipPositionX="72" pipPositionY="206">
+      <Point x="120" y="220" />
+      <Point x="438" y="220" />
+      <Point x="640" y="375" />
+      <Point x="842" y="220" />
+      <Point x="1142" y="220" />
+    </Line>
+    <Line number="15" color="#95ff00" pipPositionX="72" pipPositionY="229">
+      <Point x="120" y="243" />
+      <Point x="438" y="243" />
+      <Point x="640" y="136" />
+      <Point x="842" y="243" />
+      <Point x="1142" y="2430" />
+    </Line>
+    <Line number="16" color="#6AFF00" pipPositionX="72" pipPositionY="252">
+      <Point x="120" y="266" />
+      <Point x="233" y="266" />
+      <Point x="438" y="382" />
+      <Point x="842" y="382" />
+      <Point x="1044" y="266" />
+      <Point x="1142" y="266" />
+    </Line>
+    <Line number="17" color="#2AFF00" pipPositionX="72" pipPositionY="275">
+      <Point x="120" y="289" />
+      <Point x="233" y="289" />
+      <Point x="438" y="145" />
+      <Point x="842" y="145" />
+      <Point x="1044" y="289" />
+      <Point x="1142" y="289" />
+    </Line>
+    <Line number="18" color="#00FF80" pipPositionX="72" pipPositionY="298">
+      <Point x="120" y="312" />
+      <Point x="233" y="312" />
+      <Point x="438" y="392" />
+      <Point x="640" y="289" />
+      <Point x="842" y="392" />
+      <Point x="1044" y="312" />
+      <Point x="1142" y="312" />
+    </Line>
+    <Line number="19" color="#D5FF00" pipPositionX="1166" pipPositionY="183">
+      <Point x="138" y="197" />
+      <Point x="185" y="197" />
+      <Point x="233" y="254" />
+      <Point x="438" y="117" />
+      <Point x="640" y="254" />
+      <Point x="842" y="117" />
+      <Point x="1044" y="254" />
+      <Point x="1096" y="197" />
+      <Point x="1164" y="197" />
+    </Line>
+    <Line number="20" color="#AAFF00" pipPositionX="1166" pipPositionY="206">
+      <Point x="138" y="220" />
+      <Point x="640" y="220" />
+      <Point x="842" y="368" />
+      <Point x="1044" y="220" />
+      <Point x="1164" y="220" />
+    </Line>
+    <Line number="21" color="#80FF00" pipPositionX="1166" pipPositionY="229">
+      <Point x="138" y="243" />
+      <Point x="640" y="243" />
+      <Point x="842" y="128" />
+      <Point x="1044" y="243" />
+      <Point x="1164" y="243" />
+    </Line>
+    <Line number="22" color="#4CFF00" pipPositionX="1166" pipPositionY="252">
+      <Point x="138" y="266" />
+      <Point x="233" y="266" />
+      <Point x="438" y="371" />
+      <Point x="640" y="266" />
+      <Point x="1164" y="266" />
+    </Line>
+    <Line number="23" color="#00FF2B" pipPositionX="1166" pipPositionY="275">
+      <Point x="138" y="289" />
+      <Point x="233" y="289" />
+      <Point x="438" y="142" />
+      <Point x="640" y="289" />
+      <Point x="1164" y="289" />
+    </Line>
+    <Line number="24" color="#00FFA2" pipPositionX="1166" pipPositionY="298">
+      <Point x="138" y="312" />
+      <Point x="233" y="312" />
+      <Point x="438" y="391" />
+      <Point x="640" y="129" />
+      <Point x="842" y="391" />
+      <Point x="1044" y="312" />
+      <Point x="1164" y="312" />
+    </Line>
+    <Line number="25" color="#00FFD5" pipPositionX="1166" pipPositionY="321">
+      <Point x="138" y="335" />
+      <Point x="185" y="335" />
+      <Point x="438" y="121" />
+      <Point x="640" y="399" />
+      <Point x="842" y="121" />
+      <Point x="1044" y="335" />
+      <Point x="1164" y="335" />
+    </Line>
+    <Line number="26" color="#00FFBB" pipPositionX="72" pipPositionY="321">
+      <Point x="120" y="335" />
+      <Point x="188" y="335" />
+      <Point x="233" y="390" />
+      <Point x="1044" y="390" />
+      <Point x="1096" y="355" />
+      <Point x="1142" y="335" />
+    </Line>
+    <Line number="27" color="#00FFFF" pipPositionX="72" pipPositionY="344">
+      <Point x="120" y="358" />
+      <Point x="438" y="358" />
+      <Point x="640" y="507" />
+      <Point x="842" y="358" />
+      <Point x="1142" y="358" />
+    </Line>
+    <Line number="28" color="#00D5FF" pipPositionX="72" pipPositionY="367">
+      <Point x="120" y="381" />
+      <Point x="438" y="381" />
+      <Point x="640" y="270" />
+      <Point x="842" y="381" />
+      <Point x="1142" y="381" />
+    </Line>
+    <Line number="29" color="#0099FF" pipPositionX="72" pipPositionY="390">
+      <Point x="120" y="404" />
+      <Point x="233" y="404" />
+      <Point x="438" y="523" />
+      <Point x="842" y="523" />
+      <Point x="1044" y="404" />
+      <Point x="1142" y="404" />
+    </Line>
+    <Line number="30" color="#005DFF" pipPositionX="72" pipPositionY="413">
+      <Point x="120" y="427" />
+      <Point x="233" y="427" />
+      <Point x="438" y="268" />
+      <Point x="842" y="268" />
+      <Point x="1044" y="427" />
+      <Point x="1142" y="427" />
+    </Line>
+    <Line number="31" color="#001AFF" pipPositionX="72" pipPositionY="436">
+      <Point x="120" y="450" />
+      <Point x="233" y="450" />
+      <Point x="438" y="538" />
+      <Point x="640" y="450" />
+      <Point x="842" y="538" />
+      <Point x="1044" y="450" />
+      <Point x="1142" y="450" />
+    </Line>
+    <Line number="32" color="#4000FF" pipPositionX="72" pipPositionY="459">
+      <Point x="120" y="473" />
+      <Point x="188" y="473" />
+      <Point x="438" y="284" />
+      <Point x="640" y="421" />
+      <Point x="842" y="284" />
+      <Point x="1096" y="473" />
+      <Point x="1142" y="473" />
+    </Line>
+    <Line number="33" color="#00EAFF" pipPositionX="1166" pipPositionY="344">
+      <Point x="138" y="358" />
+      <Point x="640" y="358" />
+      <Point x="842" y="506" />
+      <Point x="1044" y="358" />
+      <Point x="1164" y="358" />
+    </Line>
+    <Line number="34" color="#00B2FF" pipPositionX="1166" pipPositionY="367">
+      <Point x="138" y="381" />
+      <Point x="640" y="381" />
+      <Point x="842" y="266" />
+      <Point x="1044" y="381" />
+      <Point x="1164" y="381" />
+    </Line>
+    <Line number="35" color="#0080FF" pipPositionX="1166" pipPositionY="390">
+      <Point x="138" y="404" />
+      <Point x="233" y="404" />
+      <Point x="438" y="523" />
+      <Point x="640" y="404" />
+      <Point x="1164" y="404" />
+    </Line>
+    <Line number="36" color="#0040ff" pipPositionX="1166" pipPositionY="413">
+      <Point x="138" y="427" />
+      <Point x="233" y="427" />
+      <Point x="438" y="271" />
+      <Point x="640" y="427" />
+      <Point x="1164" y="427" />
+    </Line>
+    <Line number="37" color="#1500FF" pipPositionX="1166" pipPositionY="436">
+      <Point x="138" y="450" />
+      <Point x="233" y="450" />
+      <Point x="438" y="537" />
+      <Point x="640" y="229" />
+      <Point x="842" y="537" />
+      <Point x="1044" y="450" />
+      <Point x="1164" y="450" />
+    </Line>
+    <Line number="38" color="#4000FF" pipPositionX="1166" pipPositionY="459">
+      <Point x="138" y="473" />
+      <Point x="185" y="473" />
+      <Point x="438" y="283" />
+      <Point x="640" y="539" />
+      <Point x="842" y="283" />
+      <Point x="1096" y="473" />
+      <Point x="1164" y="473" />
+    </Line>
+    <Line number="39" color="#8000FF" pipPositionX="72" pipPositionY="482">
+      <Point x="120" y="496" />
+      <Point x="188" y="496" />
+      <Point x="233" y="308" />
+      <Point x="640" y="308" />
+      <Point x="842" y="548" />
+      <Point x="1044" y="548" />
+      <Point x="1096" y="496" />
+      <Point x="1142" y="496" />
+    </Line>
+    <Line number="40" color="#B300FF" pipPositionX="72" pipPositionY="505">
+      <Point x="120" y="519" />
+      <Point x="438" y="519" />
+      <Point x="640" y="429" />
+      <Point x="842" y="519" />
+      <Point x="1142" y="519" />
+    </Line>
+    <Line number="41" color="#F600FF" pipPositionX="72" pipPositionY="528">
+      <Point x="120" y="542" />
+      <Point x="233" y="542" />
+      <Point x="438" y="417" />
+      <Point x="842" y="417" />
+      <Point x="1044" y="542" />
+      <Point x="1142" y="542" />
+    </Line>
+    <Line number="42" color="#FF00CC" pipPositionX="72" pipPositionY="551">
+      <Point x="120" y="565" />
+      <Point x="233" y="565" />
+      <Point x="640" y="265" />
+      <Point x="1044" y="565" />
+      <Point x="1142" y="565" />
+    </Line>
+    <Line number="43" color="#FF007F" pipPositionX="72" pipPositionY="574">
+      <Point x="120" y="588" />
+      <Point x="233" y="588" />
+      <Point x="438" y="430" />
+      <Point x="640" y="588" />
+      <Point x="842" y="430" />
+      <Point x="1044" y="588" />
+      <Point x="1142" y="588" />
+    </Line>
+    <Line number="44" color="#FF0055" pipPositionX="72" pipPositionY="598">
+      <Point x="120" y="611" />
+      <Point x="640" y="611" />
+      <Point x="842" y="453" />
+      <Point x="1044" y="611" />
+      <Point x="1142" y="611" />
+    </Line>
+    <Line number="45" color="#9500FF" pipPositionX="1166" pipPositionY="482">
+      <Point x="138" y="496" />
+      <Point x="185" y="496" />
+      <Point x="233" y="546" />
+      <Point x="438" y="410" />
+      <Point x="640" y="546" />
+      <Point x="1044" y="546" />
+      <Point x="1096" y="496" />
+      <Point x="1164" y="496" />
+    </Line>
+    <Line number="46" color="#B300FF" pipPositionX="1166" pipPositionY="505">
+      <Point x="138" y="519" />
+      <Point x="438" y="519" />
+      <Point x="640" y="429" />
+      <Point x="842" y="429" />
+      <Point x="1044" y="519" />
+      <Point x="1164" y="519" />
+    </Line>
+    <Line number="47" color="#FF00EE" pipPositionX="1166" pipPositionY="528">
+      <Point x="138" y="542" />
+      <Point x="233" y="542" />
+      <Point x="438" y="416" />
+      <Point x="640" y="416" />
+      <Point x="842" y="542" />
+      <Point x="1164" y="542" />
+    </Line>
+    <Line number="48" color="#FF00AA" pipPositionX="1166" pipPositionY="551">
+      <Point x="138" y="565" />
+      <Point x="438" y="565" />
+      <Point x="640" y="271" />
+      <Point x="872" y="565" />
+      <Point x="1164" y="565" />
+    </Line>
+    <Line number="49" color="#FF006A" pipPositionX="1166" pipPositionY="574">
+      <Point x="138" y="588" />
+      <Point x="438" y="588" />
+      <Point x="640" y="288" />
+      <Point x="1044" y="588" />
+      <Point x="1164" y="588" />
+    </Line>
+    <Line number="50" color="#FF002A" pipPositionX="1166" pipPositionY="598">
+      <Point x="138" y="611" />
+      <Point x="1164" y="611" />
+    </Line>
+    <ScatterBoxColor>#FF0000</ScatterBoxColor>
+  </LinesConfiguration>
+
+  <GambleConfiguration>
+    <GambleBackground positionY="44" positionX="137" />
+    <GambleButton>
+      <Button name="RiskHalf" startPointY="75" startPointX="403" clickSound="button_push" buttonType="Sample" />
+      <Button name="RiskAll" startPointY="75" startPointX="652" clickSound="button_push" buttonType="Sample" />
+      <Button name="Black" startPointY="356" startPointX="180" clickSound="button_push" buttonType="Sample" />
+      <Button name="Red" startPointY="441" startPointX="180" clickSound="button_push" buttonType="Sample" />
+      <Button name="Clubs" startPointY="363" startPointX="783" clickSound="button_push" buttonType="Sample" />
+      <Button name="Diamond" startPointY="363" startPointX="863" clickSound="button_push" buttonType="Sample" />
+      <Button name="Heart" startPointY="363" startPointX="943" clickSound="button_push" buttonType="Sample" />
+      <Button name="Spade" startPointY="363" startPointX="1023" clickSound="button_push" buttonType="Sample" />
+      <Button name="TakeWin" startPointY="449" startPointX="982" clickSound="button_push" buttonType="Sample" />
+    </GambleButton>
+    <GambleCard positionY="219" positionX="541" />
+    <GambleMeter>
+      <Meter name="RiskHalf" originVectorY="143" originVectorX="615" font="MeterFont" alignment="Right" color="#380033" />
+      <Meter name="RiskAll" originVectorY="143" originVectorX="867" font="MeterFont" alignment="Right" color="#380033" />
+      <Meter name="TakeWin" originVectorY="455" originVectorX="975" font="MeterFont" alignment="Right" color="#380033" />
+    </GambleMeter>
+    <GambleMessage positionY="0" positionX="0" />
+    <GambleHistory positionY="554" positionX="414" maxCount="21" />
+  </GambleConfiguration>
+
+  <PaytableConfiguration>
+    <Paytables name="1280x720">
+      <!--<Symbol name="0" turnTo="">
+        <Number group="5" pointSY="581" pointSX="508" pointCY="581" pointCX="601" font="PaytableFont32" color="#FFE400" flashingColor="#FFFFFF"/>
+        <Number group="4" pointSY="611" pointSX="508" pointCY="611" pointCX="601" font="PaytableFont32" color="#FFE400" flashingColor="#FFFFFF"/>
+        <Number group="3" pointSY="641" pointSX="508" pointCY="641" pointCX="601" font="PaytableFont32" color="#FFE400" flashingColor="#FFFFFF"/>
+        <Number group="2" pointSY="671" pointSX="508" pointCY="671" pointCX="601" font="PaytableFont32" color="#FFE400" flashingColor="#FFFFFF"/>
+        <Number group="1" pointSY="-10" pointSX="-10" pointCY="-10" pointCX="-10" font="PaytableFont32" color="#FFE400" flashingColor="#FFFFFF"/>
+      </Symbol>-->
+      <Symbol name="1" turnTo="">
+        <Number group="5" pointSX="658" pointSY="486"  pointCX="714" pointCY="486"  font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="658" pointSY="510"  pointCX="714" pointCY="510"  font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="658" pointSY="533" pointCX="714" pointCY="533" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="658" pointSY="557" pointCX="714" pointCY="557" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="2" turnTo="">
+        <Number group="5" pointSX="455" pointSY="486"  pointCX="511" pointCY="486"  font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="455" pointSY="510"  pointCX="511" pointCY="510"  font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="455" pointSY="533" pointCX="511" pointCY="533" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="455" pointSY="557" pointCX="511" pointCY="557" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="3" turnTo="">
+        <Number group="5" pointSX="860" pointSY="486" pointCX="916" pointCY="486" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="860" pointSY="510" pointCX="916" pointCY="510" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="860" pointSY="533" pointCX="916" pointCY="533" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="860" pointSY="557" pointCX="916" pointCY="557" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="4" turnTo="">
+        <Number group="5" pointSX="253" pointSY="494" pointCX="309" pointCY="494" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="253" pointSY="521" pointCX="309" pointCY="521" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="253" pointSY="547" pointCX="309" pointCY="547" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="5" turnTo="">
+        <Number group="5" pointSX="1062" pointSY="494" pointCX="1118" pointCY="494" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="1062" pointSY="521" pointCX="1118" pointCY="521" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="1062" pointSY="547" pointCX="1118" pointCY="547" font="PaytableFont24" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="6" turnTo="">
+        <Number group="5" pointSX="229" pointSY="608" pointCX="279" pointCY="608" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="229" pointSY="631" pointCX="279" pointCY="631" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="229" pointSY="653" pointCX="279" pointCY="653" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="7" turnTo="">
+        <Number group="5" pointSX="396" pointSY="608" pointCX="446" pointCY="608" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="396" pointSY="631" pointCX="446" pointCY="631" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="396" pointSY="653" pointCX="446" pointCY="653" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="8" turnTo="">
+        <Number group="5" pointSX="563" pointSY="608" pointCX="613" pointCY="608" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="563" pointSY="631" pointCX="613" pointCY="631" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="563" pointSY="653" pointCX="613" pointCY="653" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="9" turnTo="">
+        <Number group="5" pointSX="729" pointSY="608" pointCX="779" pointCY="608" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="729" pointSY="631" pointCX="779" pointCY="631" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="729" pointSY="653" pointCX="779" pointCY="653" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="10" turnTo="">
+        <Number group="5" pointSX="896" pointSY="608" pointCX="946" pointCY="608" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="896" pointSY="631" pointCX="946" pointCY="631" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="896" pointSY="653" pointCX="946" pointCY="653" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="11" turnTo="">
+        <Number group="5" pointSX="1063" pointSY="608" pointCX="1113" pointCY="608" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="4" pointSX="1063" pointSY="631" pointCX="1113" pointCY="631" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="1063" pointSY="653" pointCX="1113" pointCY="653" font="PaytableFont18" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="12" turnTo="">
+        <Number group="5" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="4" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="3" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+    </Paytables>
+    <Paytables name="768x1366">
+      <!--<Symbol name="0" turnTo="">
+        <Number group="5" pointSY="581" pointSX="508" pointCY="581" pointCX="601" font="PaytableFont29" color="#FFE400" flashingColor="#FFE400"/>
+        <Number group="4" pointSY="611" pointSX="508" pointCY="611" pointCX="601" font="PaytableFont29" color="#FFE400" flashingColor="#FFE400"/>
+        <Number group="3" pointSY="641" pointSX="508" pointCY="641" pointCX="601" font="PaytableFont29" color="#FFE400" flashingColor="#FFE400"/>
+        <Number group="2" pointSY="671" pointSX="508" pointCY="671" pointCX="601" font="PaytableFont29" color="#FFE400" flashingColor="#FFE400" />
+        <Number group="1" pointSY="-10" pointSX="-10" pointCY="-10" pointCX="-10" font="PaytableFont29" color="#FFE400" flashingColor="#FFE400" />
+      </Symbol>-->
+      <Symbol name="1" turnTo="">
+        <Number group="5" pointSX="401" pointSY="1146" pointCX="444" pointCY="1146" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="401" pointSY="1164" pointCX="444" pointCY="1164" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="401" pointSY="1182" pointCX="444" pointCY="1182" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="401" pointSY="1200" pointCX="444" pointCY="1200" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="2" turnTo="">
+        <Number group="5" pointSX="254" pointSY="1146" pointCX="297" pointCY="1146" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="254" pointSY="1164" pointCX="297" pointCY="1164" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="3" pointSX="254" pointSY="1182" pointCX="297" pointCY="1182" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="254" pointSY="1200" pointCX="297" pointCY="1200" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="3" turnTo="">
+        <Number group="5" pointSX="548" pointSY="1146"  pointCX="591" pointCY="1146"  font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="548" pointSY="1164"  pointCX="591" pointCY="1164"  font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="548" pointSY="1182" pointCX="591" pointCY="1182" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="548" pointSY="1200" pointCX="591" pointCY="1200" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400"/>
+        <Number group="1" pointSX="-1"  pointSY="-1"   pointCX="-1"  pointCY="-1"   font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="4" turnTo="">
+        <Number group="5" pointSX="107" pointSY="1152"  pointCX="150" pointCY="1152"  font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="107" pointSY="1172"  pointCX="150" pointCY="1172"  font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="107" pointSY="1192" pointCX="150" pointCY="1192" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="5" turnTo="">
+        <Number group="5" pointSX="695" pointSY="1152"  pointCX="738" pointCY="1152"  font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="695" pointSY="1172" pointCX="738" pointCY="1172" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="695" pointSY="1192" pointCX="738" pointCY="1192" font="PaytableFont32" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="6" turnTo="">
+        <Number group="5" pointSX="90" pointSY="1247" pointCX="129" pointCY="1247" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="90" pointSY="1264" pointCX="129" pointCY="1264" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="90" pointSY="1282" pointCX="129" pointCY="1282" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="7" turnTo="">
+        <Number group="5" pointSX="211" pointSY="1247" pointCX="250" pointCY="1247" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="211" pointSY="1264" pointCX="250" pointCY="1264" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="211" pointSY="1282" pointCX="250" pointCY="1282" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="8" turnTo="">
+        <Number group="5" pointSX="332" pointSY="1247" pointCX="371" pointCY="1247" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="332" pointSY="1264" pointCX="371" pointCY="1264" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="332" pointSY="1282" pointCX="371" pointCY="1282" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="9" turnTo="">
+        <Number group="5" pointSX="453" pointSY="1247" pointCX="492" pointCY="1247" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="453" pointSY="1264" pointCX="492" pointCY="1264" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="453" pointSY="1282" pointCX="492" pointCY="1282" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="10" turnTo="">
+        <Number group="5" pointSX="574" pointSY="1247" pointCX="613" pointCY="1247" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="574" pointSY="1264" pointCX="613" pointCY="1264" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="574" pointSY="1282" pointCX="613" pointCY="1282" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="11" turnTo="">
+        <Number group="5" pointSX="695" pointSY="1247" pointCX="734" pointCY="1247" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="4" pointSX="695" pointSY="1264" pointCX="734" pointCY="1264" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="3" pointSX="695" pointSY="1282" pointCX="734" pointCY="1282" font="PaytableFont29" color="#FFFFFF" flashingColor="#FFE400" />
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor=""/>
+      </Symbol>
+      <Symbol name="12" turnTo="">
+        <Number group="5" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor="" />
+        <Number group="4" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor="" />
+        <Number group="3" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor="" />
+        <Number group="2" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor="" />
+        <Number group="1" pointSX="-1" pointSY="-1" pointCX="-1" pointCY="-1" font="" color="" flashingColor="" />
+      </Symbol>
+    </Paytables>
+  </PaytableConfiguration>
+
+  <WintrackConfiguration>
+    <WintrackBackground positionX="285" positionY="610" />
+    <WintrackFrame positionX="285" positionY="610" />
+    <WintrackMask relativeX="685" relativeY="8" />
+    <!--WintrackMask Relative to WintrackFrame-->
+    <WintrackBall>
+      <CurBall relativeX="79" relativeY="25" width="34" height="38" alignment="Center" />
+      <!--CurBall Relative to WintrackFrame-->
+      <PrevBall startRelativeX="35.5" growthX="22" width="22" height="20" alignment="Center" />
+      <!--PrevBall Relative to CurBall-->
+    </WintrackBall>
+    <WintrackRules showNum="28">
+      <Rule name="win" value="0" color="red" />
+      <Rule name="loss" value="1" color="yellow" />
+      <Rule name="free" value="2" color="blue" />
+    </WintrackRules>
+  </WintrackConfiguration>
+
+  <AttractConfigurations>
+    <Attract screen="0" active="false">
+      <Video>attract_screen1</Video>
+    </Attract>
+    <Attract screen="1" active="true">
+      <!--<Video>attract_screen2</Video>-->
+      <!--use this for super ruby-->
+      <Video>attract_screen2_super</Video>
+    </Attract>
+  </AttractConfigurations>
+
+</GameConfiguration>
