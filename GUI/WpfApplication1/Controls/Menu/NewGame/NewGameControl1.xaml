@@ -10,7 +10,7 @@
         <GroupBox Header="Location" Margin="12,12,12,119" Name="groupBox1">
             <Grid>     
                 <Label Content="Location:" Height="28" HorizontalAlignment="Left" Margin="23,63,0,0" Name="label1" VerticalAlignment="Top" Width="56" />
-                <Button Content="Browse" Height="23" HorizontalAlignment="Left" Margin="464,63,0,0" Name="BrowseButton" VerticalAlignment="Top" Width="75" />
+                <Button Content="Browse" Height="23" HorizontalAlignment="Left" Margin="464,63,0,0" Name="BrowseButton" VerticalAlignment="Top" Width="75" Click="BrowseButtonClick" />
                 <Label Content="Resources:" Height="28" HorizontalAlignment="Left" Margin="23,97,0,0" Name="label2" VerticalAlignment="Top" />
                 <TextBox Height="23" HorizontalAlignment="Left" Margin="107,99,0,0" Name="ResourcesTextBox" VerticalAlignment="Top" Width="347" IsEnabled="False" IsReadOnly="True" Text="C:\Resources" />
                 <Label Content="Output:" Height="28" HorizontalAlignment="Left" Margin="23,131,0,0" Name="label3" VerticalAlignment="Top" />
