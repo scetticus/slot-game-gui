@@ -7,17 +7,23 @@
              d:DesignHeight="300" d:DesignWidth="300" Width="581" Height="331">
 
     <Grid Name="Panel">
-        <GroupBox Header="Location" Margin="12,12,12,119" Name="groupBox1">
+        <GroupBox Header="Location" Margin="12,12,12,149" Name="groupBox1">
             <Grid>     
-                <Label Content="Location:" Margin="23,63,466,86" Name="label1" />
-                <Button Content="Browse" Margin="464,63,6,91" Name="BrowseButton" Click="BrowseButtonClick" />
-                <Label Content="Resources:" Margin="23,97,451,52" Name="label2" />
-                <TextBox Margin="107,99,91,55" Name="ResourcesTextBox" IsEnabled="False" IsReadOnly="True" Text="C:\Resources" />
-                <Label Content="Output:" Margin="23,131,468,18" Name="label3" />
-                <TextBox Margin="107,133,91,21" Name="OutputTextBox" IsReadOnly="True" IsEnabled="False" Text="C:\bin" />
-                <Label Content="Game Name:" Margin="23,6,438,143" Name="label4" />
-                <TextBox Margin="107,65,91,89" Name="LocationTextBox" Text="C:\" TextChanged="LocationTextBoxTextChanged" IsEnabled="False" IsReadOnly="True" />
-                <TextBox Margin="107,6,91,146" Name="GameNameTextBox" Text="NewGame1" TextChanged="GameNameTextBoxTextChanged" />
+                <Label Content="Location:" Margin="23,46,466,0" Name="label1" Height="29" VerticalAlignment="Top" />
+                <Button Content="Browse" Margin="464,46,6,0" Name="BrowseButton" Click="BrowseButtonClick" Height="24" VerticalAlignment="Top" />
+                <Label Content="Resources:" Margin="23,80,451,0" Name="label2" Height="29" VerticalAlignment="Top" />
+                <TextBox Margin="107,82,91,0" Name="ResourcesTextBox" IsEnabled="False" IsReadOnly="True" Text="C:\Resources" Height="24" VerticalAlignment="Top" />
+                <Label Content="Output:" Margin="23,114,468,0" Name="label3" Height="29" VerticalAlignment="Top" />
+                <TextBox Margin="107,116,91,0" Name="OutputTextBox" IsReadOnly="True" IsEnabled="False" Text="C:\bin" Height="24" VerticalAlignment="Top" />
+                <Label Content="Game Name:" Margin="23,6,438,0" Name="label4" Height="29" VerticalAlignment="Top" />
+                <TextBox Margin="107,48,91,0" Name="LocationTextBox" Text="C:\" TextChanged="LocationTextBoxTextChanged" IsEnabled="False" IsReadOnly="True" Height="24" VerticalAlignment="Top" />
+                <TextBox Margin="107,6,91,0" Name="GameNameTextBox" Text="NewGame1" TextChanged="GameNameTextBoxTextChanged" Height="26" VerticalAlignment="Top" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Language and Currency" Height="131" HorizontalAlignment="Left" Margin="12,188,0,0" Name="groupBox2" VerticalAlignment="Top" Width="557">
+            <Grid>
+                <ListBox Height="88" Margin="6,6,304,0" Name="LanguageListBox" VerticalAlignment="Top" />
+                <ListBox Height="88" Margin="304,6,6,0" Name="CurrencyListBox" VerticalAlignment="Top" />
             </Grid>
         </GroupBox>
     </Grid>
