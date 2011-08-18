@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
@@ -16,6 +17,16 @@ namespace SlotGameGUI.Controls.Menu.NewGame
         public NewGameControl1()
         {
             InitializeComponent();
+
+            LanguageListBox.Items.Add(new ListBoxItem() { Content = "zh-CHT", IsSelected = true });
+            LanguageListBox.Items.Add(new ListBoxItem() { Content = "en-US", IsSelected = false });
+            LanguageListBox.Items.Add(new ListBoxItem() { Content = "ja", IsSelected = false });
+            LanguageListBox.Items.Add(new ListBoxItem() { Content = "ko", IsSelected = false });
+
+            CurrencyListBox.Items.Add(new ListBoxItem() { Content = "USD", IsSelected = true });
+            CurrencyListBox.Items.Add(new ListBoxItem() { Content = "CNY", IsSelected = false });
+            CurrencyListBox.Items.Add(new ListBoxItem() { Content = "JPY", IsSelected = false });
+            CurrencyListBox.Items.Add(new ListBoxItem() { Content = "KER", IsSelected = false });
         }
 
         private void LocationTextBoxTextChanged(object sender, TextChangedEventArgs e)
