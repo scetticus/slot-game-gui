@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using System.Windows.Media;
 using TextBox = System.Windows.Controls.TextBox;
 using UserControl = System.Windows.Controls.UserControl;
 
@@ -14,19 +15,24 @@ namespace SlotGameGUI.Controls.Menu.NewGame
     /// </summary>
     public partial class NewGameControl1 : UserControl
     {
-        public NewGameControl1()
+        public new Window Parent { get; set; }
+
+        public NewGameControl1(Window parent)
         {
+            Parent = parent;
             InitializeComponent();
 
-            LanguageListBox.Items.Add(new ListBoxItem() { Content = "zh-CHT", IsSelected = true });
-            LanguageListBox.Items.Add(new ListBoxItem() { Content = "en-US", IsSelected = false });
-            LanguageListBox.Items.Add(new ListBoxItem() { Content = "ja", IsSelected = false });
-            LanguageListBox.Items.Add(new ListBoxItem() { Content = "ko", IsSelected = false });
+            LanguageListBox.Items.Add(new ListBoxItem { Content = "zh-CHT", IsSelected = true });
+            LanguageListBox.Items.Add(new ListBoxItem { Content = "en-US", IsSelected = false });
+            LanguageListBox.Items.Add(new ListBoxItem { Content = "ja", IsSelected = false });
+            LanguageListBox.Items.Add(new ListBoxItem { Content = "ko", IsSelected = false });
 
-            CurrencyListBox.Items.Add(new ListBoxItem() { Content = "USD", IsSelected = true });
-            CurrencyListBox.Items.Add(new ListBoxItem() { Content = "CNY", IsSelected = false });
-            CurrencyListBox.Items.Add(new ListBoxItem() { Content = "JPY", IsSelected = false });
-            CurrencyListBox.Items.Add(new ListBoxItem() { Content = "KER", IsSelected = false });
+            CurrencyListBox.Items.Add(new ListBoxItem { Content = "USD", IsSelected = true });
+            CurrencyListBox.Items.Add(new ListBoxItem { Content = "CNY", IsSelected = false });
+            CurrencyListBox.Items.Add(new ListBoxItem { Content = "JPY", IsSelected = false });
+            CurrencyListBox.Items.Add(new ListBoxItem { Content = "KER", IsSelected = false });
+
+            Parent = parent;
         }
 
         private void LocationTextBoxTextChanged(object sender, TextChangedEventArgs e)
@@ -41,11 +47,40 @@ namespace SlotGameGUI.Controls.Menu.NewGame
             }
             ResourcesTextBox.Text = textBox.Text + @"\Resources";
             OutputTextBox.Text = textBox.Text + @"\bin";
+
+            var window = (NewGameWindow)Parent;
+            var str = GameNameTextBox == null ? "NewGame1" : GameNameTextBox.Text;
+            if (File.Exists(textBox.Text + @"\" + str + ".slg"))
+            {
+                window.NextButton.IsEnabled = false;
+                window.FinishButton.IsEnabled = false;
+                window.label2.Content = "Game is already existed.";
+                var brush = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+                window.label2.Foreground = brush;
+            }
+            else
+            {
+                window.NextButton.IsEnabled = true;
+                window.FinishButton.IsEnabled = true;
+                window.label2.Content = "Enter a game name.";
+                var brush = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                window.label2.Foreground = brush;
+            }
         }
 
         private void GameNameTextBoxTextChanged(object sender, TextChangedEventArgs e)
         {
             var textBox = (TextBox)e.Source;
+            var window = (NewGameWindow)Parent;
+            if (string.IsNullOrEmpty(textBox.Text))
+            {
+                window.NextButton.IsEnabled = false;
+                window.FinishButton.IsEnabled = false;
+                return;
+            }
+            window.NextButton.IsEnabled = true;
+            window.FinishButton.IsEnabled = true;
+
             foreach (var textChange in e.Changes)
             {
                 string str = textBox.Text.Substring(textChange.Offset, textChange.AddedLength);
@@ -60,12 +95,15 @@ namespace SlotGameGUI.Controls.Menu.NewGame
             }
 
 
+
             var lastSeparatorIndex = LocationTextBox.Text.LastIndexOf(@"\");
             var temp = LocationTextBox.Text.Substring(0, lastSeparatorIndex + 1);
             LocationTextBox.Text = temp + textBox.Text;
+
+
         }
 
-        private void BrowseButtonClick(object sender, System.Windows.RoutedEventArgs e)
+        private void BrowseButtonClick(object sender, RoutedEventArgs e)
         {
             var folderBrowserDialog = new FolderBrowserDialog();
             if (Directory.Exists(LocationTextBox.Text))

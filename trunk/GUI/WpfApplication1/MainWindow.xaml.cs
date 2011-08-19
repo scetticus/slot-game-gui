@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using SlotGameGUI.Common;
 using SlotGameGUI.Controls.Menu.NewGame;
 
 namespace SlotGameGUI
@@ -10,6 +11,8 @@ namespace SlotGameGUI
     public partial class MainWindow : Window
     {
         public static MainWindow Instance;
+
+        public IGame Game { get; set; }
 
         public MainWindow()
         {
@@ -24,6 +27,11 @@ namespace SlotGameGUI
         }
 
         private void ExitMenuItemClick(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void SlotGameGuiClosed(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }

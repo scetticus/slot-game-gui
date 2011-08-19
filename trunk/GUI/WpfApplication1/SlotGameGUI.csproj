@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +69,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Menu\NewGame\NewGameControl3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Menu\NewGame\NewGameWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,6 +85,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Common\Component\Connector.cs" />
+    <Compile Include="Common\Component\Display.cs" />
+    <Compile Include="Common\Component\IComponent.cs" />
+    <Compile Include="Common\Component\IVisbleComponent.cs" />
+    <Compile Include="Common\IGame.cs" />
+    <Compile Include="Common\SlotGame.cs" />
     <Compile Include="Controls\Menu\NewGame\NewGameControl1.xaml.cs">
       <DependentUpon>NewGameControl1.xaml</DependentUpon>
     </Compile>
@@ -88,6 +99,9 @@
     </Compile>
     <Compile Include="Controls\Menu\NewGame\NewGameControl2Control.xaml.cs">
       <DependentUpon>NewGameControl2Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menu\NewGame\NewGameControl3.xaml.cs">
+      <DependentUpon>NewGameControl3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Menu\NewGame\NewGameWindow.xaml.cs">
       <DependentUpon>NewGameWindow.xaml</DependentUpon>
@@ -125,7 +139,6 @@
     <Resource Include="Images\icon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\" />
     <Folder Include="Controls\Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
