@@ -8,7 +8,7 @@
         <Separator Height="4" Margin="0,99,0,0" Name="separator1" VerticalAlignment="Top" />
         <Separator Height="6" Margin="0,446,0,0" Name="separator2" VerticalAlignment="Top" />
         <Button Content="Cancel" Margin="451,475,0,0" Name="CancelButton" Click="CancelButtonClick" HorizontalAlignment="Left" Width="75" Height="23" VerticalAlignment="Top" />
-        <Button Content="Finish" Margin="354,475,0,0" Name="FinishButton" HorizontalAlignment="Left" Width="75" Height="23" VerticalAlignment="Top" />
+        <Button Content="Finish" Margin="354,475,0,0" Name="FinishButton" HorizontalAlignment="Left" Width="75" Height="23" VerticalAlignment="Top" Click="FinishButtonClick" />
         <Button Content="Next" Margin="273,475,0,0" Name="NextButton" Click="NextButtonClick" HorizontalAlignment="Left" Width="75" Height="23" VerticalAlignment="Top" />
         <Button Content="Preview" Margin="192,475,0,0" Name="PreviewButton" IsEnabled="False" Click="PreviewButtonClick" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" />
         <ContentControl Margin="0,109,0,87" Name="Panel" />

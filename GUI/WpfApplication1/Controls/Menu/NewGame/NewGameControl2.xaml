@@ -8,7 +8,7 @@
     <Grid>
         <GroupBox Header="Displays" Margin="12,12,110,12" Name="groupBox1">
             <Grid>
-                <TabControl Margin="6,6,6,2" Name="tabControl1">
+                <TabControl Margin="6,6,6,2" Name="ScreenTabControl">
                     <TabItem Header="Screen1" Name="Screen1TabItem">
                         <ContentControl  Name="Screen1Control" />
                     </TabItem>
