@@ -1,0 +1,1 @@
+auto create a base slot game
